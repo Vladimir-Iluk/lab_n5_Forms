@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркетингове дослідження</title>
+</head>
+<body>
+    <h1>Маркетингове дослідження</h1>
+    
+    <form action="#" method="post">
+        <p style="color: red;"><strong>* Обов'язкове поле</strong></p>
+        
+        <label for="lastName">Прізвище: *</label><br>
+        <input style="border: 3px solid orange;" type="text" id="lastName" name="lastName" required><br><br>
+        
+        <label for="firstName">Ім'я: *</label><br>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        
+        <label for="infoSource">З яких джерел Ви отримали інформацію про інтернет-магазин? *</label><br>
+        <textarea id="infoSource" name="infoSource" rows="9" cols="65" required></textarea><br><br>
+        
+        <label for="storeCount">Зазначте кількість інтернет-магазинів, відомих Вам: *</label><br>
+        <select style="width: 200px;" id="storeCount" name="storeCount" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+        
+        <b><p>Оцініть роботу магазину за запропонованими характеристиками: *</p></b>
+        
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Характеристика</th>
+                <th>Погано</th>
+                <th>Задовільно</th>
+                <th>Добре</th>
+                <th>Відмінно</th>
+            </tr>
+            <tr>
+                <td>Асортимент</td>
+                <td><input type="radio" name="assortment" value="Погано" required></td>
+                <td><input type="radio" name="assortment" value="Задовільно"></td>
+                <td><input type="radio" name="assortment" value="Добре"></td>
+                <td><input type="radio" name="assortment" value="Відмінно"></td>
+            </tr>
+            <tr>
+                <td>Повна інформація про товар</td>
+                <td><input type="radio" name="info" value="Погано" required></td>
+                <td><input type="radio" name="info" value="Задовільно"></td>
+                <td><input type="radio" name="info" value="Добре"></td>
+                <td><input type="radio" name="info" value="Відмінно"></td>
+            </tr>
+            <tr>
+                <td>Зручність формування замовлення</td>
+                <td><input type="radio" name="orderEase" value="Погано" required></td>
+                <td><input type="radio" name="orderEase" value="Задовільно"></td>
+                <td><input type="radio" name="orderEase" value="Добре"></td>
+                <td><input type="radio" name="orderEase" value="Відмінно"></td>
+            </tr>
+            <tr>
+                <td>Кількість варіантів оплати</td>
+                <td><input type="radio" name="paymentOptions" value="Погано" required></td>
+                <td><input type="radio" name="paymentOptions" value="Задовільно"></td>
+                <td><input type="radio" name="paymentOptions" value="Добре"></td>
+                <td><input type="radio" name="paymentOptions" value="Відмінно"></td>
+            </tr>
+        </table><br>
+
+        <b><p>Що на Вашу думку найбільш важливе для ефективного функціонування інтернет-магазину? *</p></b>
+        <input type="radio" id="assortmentPriority" name="priority" value="Асортимент" required>
+        <label for="assortmentPriority">Наявний асортимент</label><br>
+        
+        <input type="radio" id="designPriority" name="priority" value="Дизайн та зручність">
+        <label for="designPriority">Дизайн і зручність користування інтернет-магазином</label><br>
+        
+        <input type="radio" id="servicePriority" name="priority" value="Сервіс">
+        <label for="servicePriority">Наявність сервісного обслуговування</label><br>
+        
+        <input type="radio" id="otherPriority" name="priority" value="Інше">
+        <label for="otherPriority">Інше:</label>
+        <input type="text" id="otherPriorityText" name="otherPriorityText"><br><br>
+
+        <label for="productGroups">Відмітьте групи товарів, які викликали у Вас найбільше зацікавлення: *</label><br>
+        <input type="checkbox" id="tech" name="productGroups" value="Побутова техніка">
+        <label for="tech">Побутова техніка</label><br>
+        <input type="checkbox" id="furniture" name="productGroups" value="Меблі">
+        <label for="furniture">Меблі</label><br>
+        <input type="checkbox" id="chemicals" name="productGroups" value="Побутова хімія">
+        <label for="chemicals">Побутова хімія</label><br>
+        <input type="checkbox" id="computers" name="productGroups" value="Комп'ютерна техніка">
+        <label for="computers">Комп'ютерна техніка</label><br>
+        <input type="checkbox" id="other" name="productGroups" value="Інше">
+        <label for="other">Інше:</label>
+        <input type="text" id="otherProduct" name="otherProduct"><br><br>
+
+        <label for="rating">Дайте загальну оцінку інтернет-магазину за п'ятибальною шкалою: *</label><br>
+        <table>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Дуже погано</td>
+                <td><input type="radio" id="rate1" name="rating" value="1" required></td>
+                <td><input type="radio" id="rate2" name="rating" value="2"></td>
+                <td><input type="radio" id="rate3" name="rating" value="3"></td>
+                <td><input type="radio" id="rate4" name="rating" value="4"></td>
+                <td><input type="radio" id="rate5" name="rating" value="5"></td>
+                <td>Відмінно</td>
+            </tr>
+        </table><br><br>
+        <label for="improvements">Що на Вашу думку необхідно змінити/покращити в роботі нашого інтернет-магазину?</label><br>
+        <textarea id="improvements" name="improvements" rows="9" cols="65"></textarea><br><br>        
+        <input type="submit" value="Надіслати">
+    </form>
+</body>
+</html>
